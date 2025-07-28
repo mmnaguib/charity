@@ -1,15 +1,7 @@
-@font-face {
-  font-family: 'Othmani';
-  src: url('fonts/Othmani.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
-  font-family: 'Othmani', sans-serif;
   margin: 0;
-  /* width: 95%; */
-  margin: auto;
   padding: 0;
   direction: rtl;
+    font-family: uthmanic_hafs !important;
 }
