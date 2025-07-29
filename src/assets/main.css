@@ -1,65 +1,148 @@
-.headerContent{
-    border: 2px solid #eaeaea;
-    box-shadow: 0 0 5px 5px #eaeaea;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    margin-bottom: 20px;
+.headerContent {
+  border: 2px solid #eaeaea;
+  box-shadow: 0 0 5px 5px #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin-bottom: 20px;
 }
 .headerContent > div {
-    font-weight: 700;
-    font-size: 20px;
+  font-weight: 700;
+  font-size: 20px;
 }
-.surahText{
-    font-size: 27px;
-    text-align: justify;
-    line-height: 2;
-}
-
-.numberInSurah{
-    color: green;
-    display: inline-block;
-    margin: 0 10px;
-}
-.navbar{
-    
-    background: #198754;
-    height: 60px;
-    line-height: 60px;
-    width: 100%;
+.surahText {
+  font-size: 27px;
+  text-align: justify;
+  line-height: 2;
 }
 
-.navbar a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: italic;
-    display: inline-block;
-    padding: 0 10px;
+.numberInSurah {
+  width: 50px;
+  height: 50px;
+  color: #198754;
+  display: inline-block;
+  margin: 0 10px;
+  background: url("../../public/images/number.png") center center no-repeat;
+  background-size: contain;
+  line-height: 55px;
+  text-align: center;
+}
+.navbar {
+  background: #198754;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
 }
 
-.surahsCont{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: center;
-}
-.chapter{
-    border: 1px solid #eaeaea;
-    padding: 15px;
-    border-radius: 4px;
-    min-width: 150px;
-    text-align: center;
-    cursor: pointer;
-    color: #198754;
-    background: #f8f9fa;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  display: inline-block;
+  padding: 0 10px;
 }
 
-.chapter a{
-    color: #198754;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
+.surahsCont {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+.chapter {
+  border: 1px solid #eaeaea;
+  padding: 15px;
+  border-radius: 4px;
+  min-width: 150px;
+  text-align: center;
+  cursor: pointer;
+  color: #198754;
+  background: #f8f9fa;
+}
+
+.chapter a {
+  color: #198754;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.page-container {
+  width: 600px;
+  min-height: 750px;
+  margin: 20px auto;
+  padding: 30px;
+  background: #fefcf6;
+  border: 1px solid #ccc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  line-height: 2;
+  font-family: "Amiri", serif;
+  text-align: right;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  direction: rtl;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.numberInSurah {
+  margin: 0 5px;
+  font-size: 18px;
+  color: #666;
+}
+
+.navigation-buttons button {
+  padding: 8px 15px;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #eee;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.navigation-buttons button:hover {
+  background-color: #ddd;
+}
+
+.quran-page p {
+  text-align: justify;
+  margin: 0;
+}
+.quran-ayah span.number {
+  color: #006400;
+  font-weight: bold;
+  padding: 0 6px;
+}
+.swipe-left {
+  animation: slideLeft 0.3s forwards;
+}
+
+.swipe-right {
+  animation: slideRight 0.3s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
 }
