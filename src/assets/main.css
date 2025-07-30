@@ -22,7 +22,7 @@
   color: #198754;
   display: inline-block;
   margin: 0 10px;
-  background: url("../../public/images/number.png") center center no-repeat;
+  background: url("./images/number.png") center center no-repeat;
   background-size: contain;
   line-height: 55px;
   text-align: center;
@@ -144,5 +144,67 @@
   }
   to {
     transform: translateX(100px);
+  }
+}
+
+/*tasbih*/
+.tasbihContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 350px;
+  margin: auto;
+  height: 440px;
+}
+
+.tasbihContainer .increase {
+  position: absolute;
+  bottom: 55px;
+  width: 108px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 108px;
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+  border: 0;
+}
+.tasbihCount {
+  position: absolute;
+  top: 86px;
+  right: 70px;
+  font-size: 50px;
+}
+
+.tasbihContainer .reset {
+  position: absolute;
+  right: 72px;
+  top: 53.6%;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+  border: 0;
+}
+.azkarTab {
+  padding: 10px 19px;
+  color: #000;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .page-container {
+    width: 300px;
+  }
+  .headerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .azkarTab {
+    padding: 10px;
   }
 }

@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SurahViewer from "./Components/Quran/SurahViewer";
 import "./assets/main.css";
 import Navbar from "./Components/Navbar/Navbar";
+import Azkar from "./Components/Azkar/Azkar";
+import Hadiths from "./Components/Hadith/Hadiths";
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,8 @@ function App() {
         <Routes>
           <Route path="/quran" element={<QuranViewer />} />
           <Route path="quran/:number" element={<SurahViewer />} />
+          <Route path="/azkars" element={<Azkar />} />
+          <Route path="/hadiths" element={<Hadiths />} />
         </Routes>
       </BrowserRouter>
     </div>

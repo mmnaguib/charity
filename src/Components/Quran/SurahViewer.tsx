@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import QuranApi from "../../services/quranApi";
 import { IAyah } from "../../interface";
 import { SurahHeader } from "./SurahHeader";
+import Loading from "../Loading";
 
 const SurahViewer = () => {
   const { number } = useParams();
@@ -157,7 +158,6 @@ const SurahViewer = () => {
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
         style={{
-          width: "90%",
           margin: "20px auto",
           background: "#fff",
           padding: "25px",
@@ -171,10 +171,17 @@ const SurahViewer = () => {
           userSelect: "none",
           minHeight: "300px",
           lineHeight: "2.2",
-          fontSize: "1.4em",
+          fontSize: "1.5em",
           cursor: "grab",
+          textAlign: "justify",
         }}
       >
+        <div>
+          <audio
+            controls
+            src={`https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/${number}.mp3`}
+          />
+        </div>
         {ayahs.length > 0 ? (
           <p>
             {ayahs.map((ayah) => (
@@ -185,7 +192,7 @@ const SurahViewer = () => {
             ))}
           </p>
         ) : (
-          <p>لا توجد آيات في هذه الصفحة.</p>
+          <Loading />
         )}
       </div>
 

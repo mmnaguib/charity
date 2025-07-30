@@ -30,3 +30,39 @@ export interface ISurahContent {
   numberOfAyahs: number;
   ayahs: IAyah[];
 }
+
+export interface IZekr {
+  number: number;
+  text: string;
+  id: number;
+  progress?: number;
+}
+
+export interface IHahdithBook {
+  id: number;
+  bookName: string;
+  writerName: string;
+  aboutWriter: null;
+  writerDeath: string;
+  bookSlug: string;
+  hadiths_count: number;
+  chapters_count: number;
+}
+export interface IHahdithChapter {
+  id: 1;
+  chapterNumber: string;
+  chapterArabic: string;
+  bookSlug: string;
+}
+export interface IHahdith {
+  id: number;
+  hadithNumber: string;
+  hadithArabic: string;
+  headingArabic: string;
+  chapterId: string;
+  bookSlug: string;
+  volume: string;
+  status: string;
+  book: IHahdithBook;
+  chapter: IHahdithChapter;
+}
