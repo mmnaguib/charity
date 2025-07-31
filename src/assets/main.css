@@ -208,3 +208,250 @@
     padding: 10px;
   }
 }
+/* خلفية عامة */
+.prayer-times-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(to top, #fefefe, #f0f4f8);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  text-align: center;
+}
+
+/* العنوان والأيقونة */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.main-icon {
+  font-size: 40px;
+  color: #16a085;
+  animation: pulse 2s infinite;
+}
+
+.title {
+  font-size: 28px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* الرسائل */
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.loading {
+  font-size: 18px;
+  color: #777;
+}
+
+/* شبكة الصلوات */
+.prayer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* كل كارت لصلاة */
+.prayer-card {
+  background-color: #fff;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  padding: 15px 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.prayer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.fa-cloud-sun {
+  color: #e67e22;
+}
+
+.fa-cloud {
+  color: #3498db;
+}
+
+.fa-cloud-moon {
+  color: #9b59b6;
+}
+
+.fa-moon {
+  color: #2c3e50;
+}
+
+.prayer-name {
+  font-weight: bold;
+  color: #34495e;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.prayer-time {
+  font-size: 18px;
+  color: #2ecc71;
+  margin: 0;
+}
+
+/* حركة للأيقونة */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ayah-card {
+  animation: fadeIn 1.2s ease-in-out;
+}
+.prayer-bg-fajr {
+  background: linear-gradient(to top, #fefcea, #f1da36); /* شروق */
+}
+.prayer-bg-dhuhr {
+  background: linear-gradient(to top, #ffffff, #d7e1ec); /* ضوء النهار */
+}
+.prayer-bg-asr {
+  background: linear-gradient(to top, #dbe6f6, #c5796d); /* وقت العصر */
+}
+.prayer-bg-maghrib {
+  background: linear-gradient(to top, #614385, #516395); /* غروب */
+}
+.prayer-bg-isha {
+  background: linear-gradient(to top, #1e3c72, #2a5298); /* الليل */
+}
+
+.ayah-card {
+  background: linear-gradient(to top, #fdfcfb, #e2d1c3); /* بيج هادي */
+  border: 1px solid #dcd6ce;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+.ayah-text {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.ayah-meta {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.ayah-surah {
+  font-weight: bold;
+  color: #16a085;
+}
+
+.ayah-audio {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  direction: rtl;
+}
+
+.date-card {
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.date-card:hover {
+  transform: translateY(-5px);
+}
+
+.date-card.gregorian {
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+.date-card.hijri {
+  background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+}
+
+.date-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #007b83;
+}
+
+.date-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.date-main {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.date-details {
+  font-size: 1rem;
+  color: #333;
+}
+
+.date-weekday {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #444;
+}

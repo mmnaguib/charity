@@ -25,3 +25,12 @@ export const bookNameTranslations: { [key: string]: string } = {
   "Sunan Ibn-e-Majah": "سنن ابن ماجه",
   "Mishkat Al-Masabih": "مشكاة المصابيح",
 };
+export const prayerNames: Record<string, string> = {
+  Fajr: "الفجر",
+  Sunset: "الشروق",
+  Dhuhr: "الظهر",
+  Asr: "العصر",
+  Maghrib: "المغرب",
+  Isha: "العشاء",
+  Imsak: "الإمساك",
+};

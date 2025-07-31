@@ -13,7 +13,7 @@ const Azkar = () => {
       { title: "أذكار الصباح", component: <Morning /> },
       { title: "أذكار المساء", component: <Night /> },
       { title: "أذكار النوم", component: <Sleeping /> },
-      // { title: "أذكار بعد الصلاه", component: <AfterPray /> },
+      { title: "أذكار بعد الصلاه", component: <AfterPray /> },
       { title: "تسبيح", component: <Tasbih /> },
     ],
     []

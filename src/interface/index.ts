@@ -19,6 +19,7 @@ export interface IAyah {
   ruku: number;
   hizbQuarter: number;
   sajda: boolean;
+  surah: ISurahContent;
 }
 
 export interface ISurahContent {
